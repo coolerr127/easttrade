@@ -1,0 +1,31 @@
+body {
+	background-image: url(../img/background/white-paper.png);
+}
+
+header {
+	background-color: #96cb00;
+}
+
+.wrapper {
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+img.logo {
+	height: 90px;
+	/* max-width: 150px; */
+}
+
+.menu li {
+	display: inline;
+}
+
+.menu li + li {
+	margin-left: 10px;
+}
+
+.menu a {
+	line-height: 97px;
+}
