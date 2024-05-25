@@ -7,7 +7,8 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "lint": "eslint . --fix"
   },
   "dependencies": {
     "@mdi/font": "^7.4.47",
@@ -19,6 +20,14 @@
     "vuetify": "^3.6.7"
   },
   "devDependencies": {
+    "@eslint/js": "^9.3.0",
+    "@nuxt/eslint-config": "^0.3.13",
+    "@nuxtjs/eslint-config-typescript": "^12.1.0",
+    "@typescript-eslint/eslint-plugin": "^7.10.0",
+    "@typescript-eslint/parser": "^7.10.0",
+    "eslint": "^9.3.0",
+    "eslint-define-config": "^2.1.0",
+    "eslint-plugin-vue": "^9.26.0",
     "typescript": "^5.4.5",
     "vite-plugin-vuetify": "^2.0.3",
     "vue-tsc": "^1"

@@ -4,28 +4,28 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   typescript: {
-    typeCheck: true,
+    typeCheck: true
   },
 
   build: {
-    transpile: ["vuetify"],
+    transpile: ["vuetify"]
   },
 
   modules: [
     "@nuxt/eslint",
     (_options, nuxt) => {
       nuxt.hooks.hook("vite:extendConfig", (config) => {
-        // @ts-expect-error
+        // @ts-expect-error: vuetify plugin has no TypeScript definitions
         config.plugins.push(vuetify({ autoImport: true }));
       });
-    },
+    }
   ],
 
   vite: {
     vue: {
       template: {
-        transformAssetUrls,
-      },
-    },
-  },
+        transformAssetUrls
+      }
+    }
+  }
 });
