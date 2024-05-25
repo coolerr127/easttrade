@@ -12,6 +12,7 @@ export default defineNuxtConfig({
   },
 
   modules: [
+    "@nuxtjs/i18n",
     "@nuxt/eslint",
     (_options, nuxt) => {
       nuxt.hooks.hook("vite:extendConfig", (config) => {
@@ -20,6 +21,10 @@ export default defineNuxtConfig({
       });
     }
   ],
+
+  i18n: {
+    vueI18n: "./i18n.config.ts"
+  },
 
   vite: {
     vue: {
