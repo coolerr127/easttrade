@@ -1,3 +1,8 @@
 {
-  "welcome": "Welcome"
+  "welcome": "welcome",
+  "home": "home",
+  "about": "about",
+  "contacts": "contacts",
+  "partners": "partners",
+  "certifications": "certifications"
 }

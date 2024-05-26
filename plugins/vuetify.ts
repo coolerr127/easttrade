@@ -3,12 +3,19 @@ import "@mdi/font/css/materialdesignicons.css";
 import "vuetify/styles";
 import { createVuetify } from "vuetify";
 
-export default defineNuxtPlugin((app) => {
+export default defineNuxtPlugin((nuxtApp) => {
   const vuetify = createVuetify({
     theme: {
-      defaultTheme: "light"
+      defaultTheme: "light",
+      themes: {
+        light: {
+          colors: {
+            lightGreenDarken4: "#33691E"
+          }
+        }
+      }
     }
   });
 
-  app.vueApp.use(vuetify);
+  nuxtApp.vueApp.use(vuetify);
 });

@@ -3,9 +3,15 @@ import vuetify, { transformAssetUrls } from "vite-plugin-vuetify";
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
+  generate: {
+    routes: ["/", "/about", "/partners", "/certifications", "/contacts"]
+  },
+
   typescript: {
     typeCheck: true
   },
+
+  css: ["~/assets/styles/global.css"],
 
   build: {
     transpile: ["vuetify"]

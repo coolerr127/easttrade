@@ -1,34 +1,30 @@
-<template class="app-header">
-  <v-card>
-    <v-tabs v-model="tab" bg-color="primary">
-      <NuxtLink to="/"><v-tab value="1">Home</v-tab></NuxtLink>
-      <NuxtLink to="/about"><v-tab value="2">About</v-tab></NuxtLink>
-      <!--      <NuxtLink to="/test"><v-tab value="3">test</v-tab></NuxtLink>-->
-    </v-tabs>
-
-    <!--    <v-card-text>-->
-    <!--      <v-tabs-window v-model="tab">-->
-    <!--        <v-tabs-window-item value="one"> One </v-tabs-window-item>-->
-
-    <!--        <v-tabs-window-item value="two"> Two </v-tabs-window-item>-->
-
-    <!--        <v-tabs-window-item value="three"> Three </v-tabs-window-item>-->
-    <!--      </v-tabs-window>-->
-    <!--    </v-card-text>-->
-  </v-card>
+<template>
+  <div class="app-header bg-light-green">
+    <v-img :src="logo" alt="Logo" :width="120" aspect-ratio="1/1" class="app-header__logo" cover />
+    <HeaderNavigate />
+  </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-
-const tab = ref(null);
+  import logo from "~/assets/logo.png";
 </script>
 
 <style scoped>
-.app-header {
-  background-color: #333;
-  color: white;
-  padding: 10px;
-  text-align: center;
-}
+  .app-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    z-index: 1000;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .app-header__logo {
+    position: absolute;
+    top: 0;
+    left: 15vw;
+  }
 </style>

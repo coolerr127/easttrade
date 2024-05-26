@@ -1,5 +1,5 @@
 <template>
   <div>
-    <h1>About to the homepage</h1>
+    <h1>Partners to the homepage</h1>
   </div>
 </template>
