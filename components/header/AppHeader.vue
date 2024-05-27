@@ -1,6 +1,6 @@
 <template>
   <div class="app-header bg-light-green">
-    <v-img :src="logo" alt="Logo" :width="120" aspect-ratio="1/1" class="app-header__logo" cover />
+    <v-img :src="logo" alt="Logo" :width="180" aspect-ratio="1/1" class="app-header__logo" cover />
     <HeaderNavigate />
   </div>
 </template>
@@ -24,7 +24,7 @@
 
   .app-header__logo {
     position: absolute;
-    top: 0;
+    top: 5px;
     left: 15vw;
   }
 </style>
