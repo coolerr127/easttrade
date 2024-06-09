@@ -2,7 +2,12 @@ html, body {
     background-color: #F1F8E9;
     margin: 0;
     overflow: hidden !important;
-    padding-top: 5vh;
+}
+
+body {
+    padding-top: 100px;
+    background: linear-gradient(rgba(241, 248, 233, 0.7), rgba(241, 248, 233, 0.7)), url('/assets/bgTree.jpg') center/cover no-repeat;
+    height: 100vh;
 }
 
 .app .v-application__wrap {

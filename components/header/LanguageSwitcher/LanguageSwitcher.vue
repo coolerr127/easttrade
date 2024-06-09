@@ -1,21 +1,21 @@
 <template>
   <div class="language-switcher">
-    <button
+    <v-btn
       v-for="locale in locales"
       :key="locale"
       :class="{ 'active-locale': locale === currentLocale }"
       @click="switchLocale(locale)"
+      outlined
+      class="locale-btn"
+      size="small"
+      variant="text"
     >
       {{ locale }}
-    </button>
+    </v-btn>
   </div>
 </template>
 
 <script lang="ts">
-  import { defineComponent } from "vue";
-  import { useI18n } from "vue-i18n";
-  import { useRoute, useRouter } from "vue-router";
-
   export default defineComponent({
     setup() {
       const { availableLocales, locale } = useI18n();
@@ -42,17 +42,12 @@
     gap: 10px;
   }
 
-  .language-switcher button {
+  .locale-btn {
     padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #f0f0f0;
-    cursor: pointer;
     transition: background-color 0.3s ease;
   }
 
-  .language-switcher button.active-locale {
-    background-color: #007bff;
-    color: white;
+  .locale-btn.active-locale {
+    background-color: #7cb342;
   }
 </style>

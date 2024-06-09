@@ -16,7 +16,5 @@
     <v-btn color="light-green-accent-2">Dark</v-btn>
     <v-btn color="light-green-accent-3">Dark</v-btn>
     <v-btn color="light-green-accent-4">Dark</v-btn>
-
-    <HeaderLanguageSwitcher />
   </div>
 </template>

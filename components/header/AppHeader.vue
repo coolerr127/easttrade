@@ -1,12 +1,24 @@
 <template>
   <div class="app-header bg-light-green">
-    <v-img :src="logo" alt="Logo" :width="180" aspect-ratio="1/1" class="app-header__logo" cover />
-    <HeaderNavigate />
+    <div class="app-header__content-container">
+      <div class="app-header__center-container">
+        <v-img :src="logo" alt="Logo" :width="200" aspect-ratio="1/1" class="app-header__logo" cover />
+      </div>
+      <HeaderNavigate />
+      <div class="app-header__center-container">
+        <div class="app-header__phone-numbers">
+          <div> +375172824451 </div>
+          <div> +375291570050 </div>
+        </div>
+
+        <HeaderLanguageSwitcher />
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
-  import logo from "~/assets/logo.png";
+  import logo from "assets/logo.png";
 </script>
 
 <style scoped>
@@ -15,16 +27,41 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 10vh;
+    height: 100px;
     z-index: 1000;
     display: flex;
-    align-items: flex-end;
     justify-content: center;
   }
 
-  .app-header__logo {
-    position: absolute;
-    top: 5px;
-    left: 15vw;
+  .app-header__content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 70vw;
+    padding: 0 20px;
+  }
+
+  .app-header__center-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  .app-header__phone-numbers {
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+  }
+
+  @media (max-width: 1919px) {
+    .app-header__content-container {
+      width: 90vw;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .app-header__content-container {
+      width: 100vw;
+    }
   }
 </style>

@@ -59,6 +59,7 @@
     display: flex;
     list-style: none;
     padding: 0;
+    margin-left: 15px;
   }
 
   .nav-list__nav-link {
