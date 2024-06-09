@@ -4,11 +4,11 @@
       v-for="locale in locales"
       :key="locale"
       :class="{ 'active-locale': locale === currentLocale }"
-      @click="switchLocale(locale)"
       outlined
       class="locale-btn"
       size="small"
       variant="text"
+      @click="switchLocale(locale)"
     >
       {{ locale }}
     </v-btn>
