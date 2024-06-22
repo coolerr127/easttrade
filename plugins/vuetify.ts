@@ -9,7 +9,9 @@ export default defineNuxtPlugin((nuxtApp) => {
       defaultTheme: "light",
       themes: {
         light: {
-          colors: {}
+          colors: {
+            background: "#F1F8E9"
+          }
         }
       }
     }

@@ -6,11 +6,15 @@ html, body {
 
 body {
     padding-top: 100px;
+    padding-bottom: 55px;
     background: linear-gradient(rgba(241, 248, 233, 0.7), rgba(241, 248, 233, 0.7)), url('/assets/bgTree.jpg') center/cover no-repeat;
     height: 100vh;
 }
 
+.v-application {
+    background: none !important;
+}
+
 .app .v-application__wrap {
     min-height: 100%;
-    background-color: #F1F8E9;
 }

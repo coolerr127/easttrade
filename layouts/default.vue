@@ -18,5 +18,6 @@
   .app__main {
     width: 70vw;
     margin: 0 auto;
+    height: 100%;
   }
 </style>
