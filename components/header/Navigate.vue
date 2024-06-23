@@ -18,13 +18,6 @@
           </NuxtLink>
         </li>
         <li>
-          <NuxtLink to="/certifications" exact class="nav-list__nav-link">
-            <v-btn class="nav-list__nav-item bg-light-green" height="56" value="/certifications">{{
-              $t("certifications")
-            }}</v-btn>
-          </NuxtLink>
-        </li>
-        <li>
           <NuxtLink to="/contacts" exact class="nav-list__nav-link">
             <v-btn class="nav-list__nav-item bg-light-green" height="56" value="/contacts">{{ $t("contacts") }}</v-btn>
           </NuxtLink>

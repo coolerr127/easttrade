@@ -16,9 +16,10 @@
   .app-footer {
     width: 100%;
     height: 55px;
+    margin-top: -55px;
     text-align: center;
     padding: 15px 0;
-    position: absolute;
+    position: relative;
     bottom: 0;
   }
 

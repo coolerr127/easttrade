@@ -1,17 +1,12 @@
 <template>
   <div class="container">
-    <v-card class="v-card">
-      <v-card-title class="text-h6"> О компании EastTrade </v-card-title>
-      <v-card-text class="text-body-1">
-        EastTrade - интегратор различных бизнес-решений. Мы работаем с множеством партнеров по всему миру, предоставляя
-        инновационные и надежные услуги для различных отраслей бизнеса.
-      </v-card-text>
-      <v-card-text>
-        EastTrade is an integrator of various business solutions. We collaborate with numerous partners worldwide,
-        providing innovative and reliable services for various industries.
+    <v-card class="card" color="light-green">
+      <v-card-title class="text-h1 card__title">{{ capitalizeFirstLetter($t("about_the_company")) }}</v-card-title>
+      <v-card-text class="text-body-1 card__text">
+        {{ capitalizeFirstLetter($t("company_short_description")) }}
       </v-card-text>
       <v-card-actions>
-        <v-btn color="primary" @click="goToAboutPage">Узнать больше</v-btn>
+        <v-btn variant="tonal" @click="goToAboutPage">{{ $t("learn_more") }}</v-btn>
       </v-card-actions>
     </v-card>
   </div>
@@ -19,7 +14,6 @@
 
 <script setup>
   function goToAboutPage() {
-    // предполагается, что маршрут страницы "о нас" настроен как '/about'
     navigateTo("/about");
   }
 </script>
@@ -29,12 +23,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 200px);
+    height: 100vh;
   }
 
-  .v-card {
-    max-width: 800px;
+  .card {
+    max-width: 1000px;
     margin: auto;
-    padding: 50px;
+    padding: 70px;
+    opacity: 0.8;
+
+    .card__title {
+      font-size: 3rem !important;
+    }
+
+    .card__text {
+      font-size: 1.2rem !important;
+    }
   }
 </style>
