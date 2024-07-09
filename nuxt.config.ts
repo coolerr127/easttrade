@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   generate: {
-    routes: ["/", "/about", "/partners", "/certifications", "/contacts"]
+    routes: ["/", "/about", "/partners", "/contacts"]
   },
 
   typescript: {

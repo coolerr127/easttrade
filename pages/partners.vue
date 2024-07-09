@@ -5,9 +5,15 @@
         <v-sheet color="light-green" height="100%">
           <div class="d-flex fill-height justify-space-evenly align-center">
             <div class="photo-container">
-              <img v-for="(photo, index) in slide.photos" :src="photo" :key="index" class="slide-photo" />
+              <img
+                v-for="(photo, index) in slide.photos"
+                :src="photo"
+                :key="index"
+                :alt="'Slide image ' + (index + 1)"
+                class="slide-photo"
+              />
             </div>
-            <div class="text-container text-h2">{{ slide.description }}</div>
+            <div class="text-container"><span v-html="$t(slide.description)"></span></div>
           </div>
         </v-sheet>
       </v-carousel-item>
@@ -20,15 +26,15 @@
 
   const slides = ref([
     {
-      description: "First Slide",
+      description: "kansar_khazar_company_description",
       photos: ["/partners/kkh1.gif", "/partners/kkh2.gif", "/partners/kkh3.gif"]
     },
     {
-      description: "Second Slide",
+      description: "hp_trucks_and_parts_company_description",
       photos: ["/partners/ht-trucks-1.gif", "/partners/ht-trucks-2.gif", "/partners/ht-trucks-3.gif"]
     },
     {
-      description: "Third Slide",
+      description: "belsolod_company_description",
       photos: ["/partners/belsolod-1.jpg", "/partners/belsolod-2.jpg", "/partners/belsolod-3.jpg"]
     }
   ]);
@@ -64,6 +70,7 @@
   }
 
   .text-container {
-    margin-left: 20px;
+    width: 50%;
+    font-size: 1.5rem;
   }
 </style>
