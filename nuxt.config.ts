@@ -17,6 +17,8 @@ export default defineNuxtConfig({
     transpile: ["vuetify"]
   },
 
+  plugins: ["~/plugins/vue-google-maps.ts"],
+
   modules: [
     "@nuxtjs/i18n",
     "@nuxt/eslint",
