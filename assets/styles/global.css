@@ -2,6 +2,7 @@ html, body {
     background-color: #F1F8E9;
     margin: 0;
     overflow: hidden !important;
+    font-family: sans-serif !important;
 }
 
 body {

@@ -5,7 +5,7 @@
       :key="locale"
       :class="{ 'active-locale': locale === currentLocale }"
       outlined
-      class="locale-btn"
+      class="locale-btn font-weight-regular"
       size="small"
       variant="text"
       @click="switchLocale(locale)"

@@ -7,8 +7,8 @@
       <HeaderNavigate />
       <div class="app-header__center-container">
         <div class="app-header__phone-numbers">
-          <div> +375172824451 </div>
-          <div> +375291570050 </div>
+          <div> +375 (17) 2701987 </div>
+          <div> +375 (29) 1570050 </div>
         </div>
 
         <HeaderLanguageSwitcher />
