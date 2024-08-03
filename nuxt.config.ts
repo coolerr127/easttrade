@@ -17,7 +17,7 @@ export default defineNuxtConfig({
     transpile: ["vuetify"]
   },
 
-  plugins: ["~/plugins/vue-google-maps.ts"],
+  plugins: ["~/plugins/google-maps.ts"],
 
   modules: [
     "@nuxtjs/i18n",
@@ -40,5 +40,7 @@ export default defineNuxtConfig({
         transformAssetUrls
       }
     }
-  }
+  },
+
+  compatibilityDate: "2024-08-03"
 });
