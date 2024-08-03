@@ -1,6 +1,7 @@
 export default defineNuxtPlugin(() => {
   if (!import.meta.env.SSR) {
-    const googleMapsApiKey = process.env.GOOGLE_MAPS_API_KEY;
+    const config = useRuntimeConfig();
+    const googleMapsApiKey = config.public.googleMapsApiKey;
 
     const script = document.createElement("script");
     script.src = `https://maps.googleapis.com/maps/api/js?key=${googleMapsApiKey}`;

@@ -30,6 +30,12 @@ export default defineNuxtConfig({
     }
   ],
 
+  runtimeConfig: {
+    public: {
+      googleMapsApiKey: process.env.GOOGLE_MAPS_API_KEY
+    }
+  },
+
   i18n: {
     vueI18n: "./i18n.config.ts"
   },
