@@ -1,6 +1,13 @@
 <template>
   <div class="container">
-    <v-carousel class="carousel" height="70vh" show-arrows="hover" interval="5000" cycle hide-delimiter-background>
+    <v-carousel
+      class="carousel"
+      height="70vh"
+      show-arrows="hover"
+      interval="5000"
+      cycle
+      hide-delimiter-background
+    >
       <v-carousel-item v-for="(slide, i) in slides" :key="i">
         <v-sheet color="light-green" height="100%">
           <div class="d-flex fill-height justify-space-evenly align-center">
@@ -13,7 +20,10 @@
                 class="slide-photo"
               />
             </div>
-            <div class="text-container"><span v-html="$t(slide.description)"></span></div>
+            <div class="text-container">
+              <div class="text-h3" v-html="$t(slide.title)" />
+              <div v-html="$t(slide.description)" />
+            </div>
           </div>
         </v-sheet>
       </v-carousel-item>
@@ -26,14 +36,17 @@
 
   const slides = ref([
     {
+      title: "The Kansar Khazar",
       description: "kansar_khazar_company_description",
       photos: ["/partners/kkh1.gif", "/partners/kkh2.gif", "/partners/kkh3.gif"]
     },
     {
+      title: "HT Trucks and Parts",
       description: "hp_trucks_and_parts_company_description",
       photos: ["/partners/ht-trucks-1.gif", "/partners/ht-trucks-2.gif", "/partners/ht-trucks-3.gif"]
     },
     {
+      title: "Belsolod",
       description: "belsolod_company_description",
       photos: ["/partners/belsolod-1.jpg", "/partners/belsolod-2.jpg", "/partners/belsolod-3.jpg"]
     }

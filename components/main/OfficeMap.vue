@@ -15,7 +15,9 @@
           const google = (window as any).google;
           const mapInstance = new google.maps.Map(map.value, {
             center: { lat: 53.9212774, lng: 27.52713 },
-            zoom: 15
+            zoom: 15,
+            mapTypeControl: false,
+            streetViewControl: false
           });
 
           new google.maps.Marker({

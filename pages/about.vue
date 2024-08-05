@@ -23,7 +23,7 @@
     opacity: 0.8;
 
     .card__text {
-      font-size: 1.3rem !important;
+      font-size: 1.5rem !important;
     }
   }
 </style>

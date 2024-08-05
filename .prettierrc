@@ -1,6 +1,6 @@
 {
   "vueIndentScriptAndStyle": true,
-  "printWidth": 120,
+  "printWidth": 110,
   "singleQuote": false,
   "trailingComma": "none",
   "bracketSameLine": false,
