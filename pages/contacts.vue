@@ -9,7 +9,17 @@
             </div>
           </v-col>
           <v-col cols="5">
-            <div> {{ capitalizeFirstLetter($t("address")) }}: {{ capitalizeFirstLetter($t("address_name")) }} </div>
+            <div>
+              <strong>{{ capitalizeFirstLetter($t("address")) }}:</strong>
+              {{ capitalizeFirstLetter($t("address_name")) }}
+            </div>
+            <v-divider class="my-4"></v-divider>
+            <div>
+              <strong>{{ capitalizeFirstLetter($t("city")) }}:</strong> +375 (17) 2701987
+            </div>
+            <div>
+              <strong>{{ capitalizeFirstLetter($t("mobile")) }}:</strong> +375 (29) 1570050
+            </div>
           </v-col>
         </v-row>
       </v-container>
@@ -38,5 +48,13 @@
   .map-wrapper {
     width: 100%;
     height: 400px;
+  }
+
+  strong {
+    font-weight: bold;
+  }
+
+  .my-4 {
+    margin: 16px 0;
   }
 </style>
