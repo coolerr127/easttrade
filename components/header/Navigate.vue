@@ -9,17 +9,23 @@
         </li>
         <li>
           <NuxtLink to="/about" exact class="nav-list__nav-link">
-            <v-btn class="nav-list__nav-item bg-light-green" height="56" value="/about">{{ $t("about") }}</v-btn>
+            <v-btn class="nav-list__nav-item bg-light-green" height="56" value="/about">{{
+              $t("about")
+            }}</v-btn>
           </NuxtLink>
         </li>
         <li>
           <NuxtLink to="/partners" exact class="nav-list__nav-link">
-            <v-btn class="nav-list__nav-item bg-light-green" height="56" value="/partners">{{ $t("partners") }}</v-btn>
+            <v-btn class="nav-list__nav-item bg-light-green" height="56" value="/partners">{{
+              $t("partners")
+            }}</v-btn>
           </NuxtLink>
         </li>
         <li>
           <NuxtLink to="/contacts" exact class="nav-list__nav-link">
-            <v-btn class="nav-list__nav-item bg-light-green" height="56" value="/contacts">{{ $t("contacts") }}</v-btn>
+            <v-btn class="nav-list__nav-item bg-light-green" height="56" value="/contacts">{{
+              $t("contacts")
+            }}</v-btn>
           </NuxtLink>
         </li>
       </ul>
