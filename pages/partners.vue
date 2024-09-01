@@ -1,28 +1,21 @@
 <template>
-  <div class="container">
-    <v-carousel
-      class="carousel"
-      height="70vh"
-      show-arrows="hover"
-      interval="5000"
-      cycle
-      hide-delimiter-background
-    >
+  <div class="carousel-container">
+    <v-carousel class="carousel" show-arrows="hover" interval="5000" cycle hide-delimiter-background>
       <v-carousel-item v-for="(slide, i) in slides" :key="i">
         <v-sheet color="light-green" height="100%">
-          <div class="d-flex fill-height justify-space-evenly align-center">
-            <div class="photo-container">
+          <div class="carousel__content d-flex fill-height justify-space-evenly align-center">
+            <div class="carousel__photo-container">
               <img
                 v-for="(photo, index) in slide.photos"
                 :src="photo"
                 :key="index"
                 :alt="'Slide image ' + (index + 1)"
-                class="slide-photo"
+                class="carousel__photo"
               />
             </div>
-            <div class="text-container">
-              <div class="text-h3" v-html="$t(slide.title)" />
-              <div v-html="$t(slide.description)" />
+            <div class="carousel__text-container">
+              <div class="carousel__title text-h3" v-html="$t(slide.title)" />
+              <div class="carousel__description" v-html="$t(slide.description)" />
             </div>
           </div>
         </v-sheet>
@@ -54,7 +47,7 @@
 </script>
 
 <style scoped>
-  .container {
+  .carousel-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -65,13 +58,34 @@
     max-width: 1200px;
     border-radius: 4px;
     opacity: 0.8;
+    height: 70vh !important;
     box-shadow:
       0 2px 1px -1px rgba(0, 0, 0, 0.2),
       0 1px 1px 0 rgba(0, 0, 0, 0.14),
       0 1px 3px 0 rgba(0, 0, 0, 0.12);
   }
 
-  .photo-container {
+  @media (max-width: 1440px) {
+    .carousel {
+      max-width: 900px;
+    }
+  }
+
+  @media (max-width: 960px) {
+    .carousel {
+      max-width: 700px;
+      height: 50vh !important;
+    }
+  }
+
+  .carousel__content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+  }
+
+  .carousel__photo-container {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -80,14 +94,46 @@
     padding: 10px;
   }
 
-  .slide-photo {
+  @media (max-width: 960px) {
+    .carousel__photo-container {
+      display: none;
+    }
+  }
+
+  .carousel__photo {
     width: 100%;
     height: auto;
     margin-bottom: 10px;
   }
 
-  .text-container {
+  .carousel__text-container {
     width: 50%;
-    font-size: 1.5rem;
+  }
+
+  @media (max-width: 960px) {
+    .carousel__text-container {
+      width: 100%;
+    }
+  }
+
+  .carousel__title {
+    font-size: 2.1rem !important;
+    margin-bottom: 16px;
+  }
+
+  .carousel__description {
+    font-size: 1.3rem;
+  }
+
+  @media (max-width: 1440px) {
+    .carousel__description {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 1280px) {
+    .carousel__description {
+      font-size: 1rem;
+    }
   }
 </style>

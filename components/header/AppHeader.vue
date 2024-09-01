@@ -10,8 +10,9 @@
           <div> +375 (17) 2701987 </div>
           <div> +375 (29) 1570050 </div>
         </div>
-
-        <HeaderLanguageSwitcher />
+        <div class="app-header__language-switch">
+          <HeaderLanguageSwitcher />
+        </div>
       </div>
     </div>
   </div>
@@ -53,6 +54,12 @@
     margin-right: 30px;
   }
 
+  @media (max-width: 960px) {
+    .app-header__phone-numbers {
+      display: none;
+    }
+  }
+
   @media (max-width: 1919px) {
     .app-header__content-container {
       width: 90vw;
@@ -62,6 +69,12 @@
   @media (max-width: 1200px) {
     .app-header__content-container {
       width: 100vw;
+    }
+  }
+
+  @media (max-width: 780px) {
+    .app-header__language-switch {
+      display: none;
     }
   }
 </style>

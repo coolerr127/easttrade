@@ -1,8 +1,8 @@
 <template>
   <div class="container">
     <v-card class="card" color="light-green">
-      <v-card-title class="text-h1 card__title">{{ capitalizeFirstLetter($t("about_the_company")) }}</v-card-title>
-      <v-card-text class="text-body-1 card__text">
+      <v-card-title class="card__title">{{ capitalizeFirstLetter($t("about_the_company")) }}</v-card-title>
+      <v-card-text class="card__text">
         {{ capitalizeFirstLetter($t("company_short_description")) }}
       </v-card-text>
       <v-card-actions>
@@ -32,12 +32,17 @@
     padding: 70px;
     opacity: 0.8;
 
-    .card__title {
-      font-size: 3rem !important;
-    }
+  .card__title {
+    font-size: 3rem;
+  }
 
+  .card__text {
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 1440px) {
     .card__text {
-      font-size: 1.2rem !important;
+      font-size: 1.2rem;
     }
   }
 </style>
