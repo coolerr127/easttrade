@@ -31,6 +31,20 @@
     margin: auto;
     padding: 70px;
     opacity: 0.8;
+  }
+
+  @media (max-width: 1440px) {
+    .card {
+      padding: 50px;
+    }
+  }
+
+  @media (max-width: 960px) {
+    .card {
+      max-width: 700px;
+      padding: 0;
+    }
+  }
 
   .card__title {
     font-size: 3rem;
